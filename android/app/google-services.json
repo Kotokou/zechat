@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768195037773",
+    "project_id": "zechat-584ae",
+    "storage_bucket": "zechat-584ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768195037773:android:4c7ccb027f94e49f52aa04",
+        "android_client_info": {
+          "package_name": "com.example.zechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768195037773-6tsdin8me0s2vrk57vb4qc672kcnjp19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB22kX7rcWIM9elTK4IamqHa1ypVxVbkoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768195037773-1gm1rnqkilsjr2ku4vko8tm9olqs4ncq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
