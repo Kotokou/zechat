@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zechat/configs/constants/app_colors.dart';
 
 class LoadingView extends StatelessWidget {
   const LoadingView({super.key});
@@ -6,10 +7,10 @@ class LoadingView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black87,
+      color: Colors.transparent,
       child: const Center(
         child: CircularProgressIndicator(
-          color: Colors.grey,
+          color: AppColors.themeColor,
         ),
       ),
     );
