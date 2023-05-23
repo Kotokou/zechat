@@ -19,7 +19,7 @@ class SettingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       backgroundColor: isWhite ? Colors.white : Colors.black,
       appBar: AppBar(
         backgroundColor: isWhite ? Colors.white : Colors.black,
@@ -32,14 +32,13 @@ class SettingScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SettingsScreenState(),
+      body: const SettingsScreenState(),
     );
   }
 }
 
 class SettingsScreenState extends StatefulWidget {
   const SettingsScreenState({super.key});
-
 
   @override
   State<SettingsScreenState> createState() => _SettingsScreenStateState();
@@ -49,7 +48,7 @@ class _SettingsScreenStateState extends State<SettingsScreenState> {
   TextEditingController? controllerNickName;
   TextEditingController? controllerAboutMe;
 
-   TextEditingController _controller = TextEditingController();
+  TextEditingController _controller = TextEditingController();
 
   String dialCodeDigits = "+00";
 
@@ -156,7 +155,7 @@ class _SettingsScreenStateState extends State<SettingsScreenState> {
     setState(() {
       isLoading = true;
 
-      if(dialCodeDigits != "+00" && _controller.text != "") {
+      if (dialCodeDigits != "+00" && _controller.text != "") {
         phoneNumber = dialCodeDigits + _controller.text.toString();
       }
     });
@@ -397,26 +396,23 @@ class _SettingsScreenStateState extends State<SettingsScreenState> {
                       ),
                     ),
                   ),
-
-                  Center(
-                    child: Container(
-                      margin: const EdgeInsets.only(top: 50, bottom: 50),
-                      child: TextButton(
-                        onPressed: handleUpdateData,
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(
-                                AppColors.primaryColor),
-                            padding: MaterialStateProperty.all<EdgeInsets>(
-                              const EdgeInsets.fromLTRB(30, 10, 30, 10),
-                            )),
-                        child: const Text(
-                          "Update Now",
-                          style: TextStyle(fontSize: 16, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
                 ],
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 50, bottom: 50),
+                child: TextButton(
+                  onPressed: handleUpdateData,
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          AppColors.primaryColor),
+                      padding: MaterialStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.fromLTRB(30, 10, 30, 10),
+                      )),
+                  child: const Text(
+                    "Update Now",
+                    style: TextStyle(fontSize: 16, color: Colors.white),
+                  ),
+                ),
               ),
             ],
           ),
