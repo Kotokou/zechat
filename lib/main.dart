@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zechat/providers/auth_provider.dart';
 import 'package:zechat/init_app.dart';
+import 'package:zechat/providers/setting_provider.dart';
 import 'package:zechat/screens/splash_screen.dart';
 
 bool isWhite = false;
@@ -32,6 +33,13 @@ class MyApp extends StatelessWidget {
             firebaseAuth: FirebaseAuth.instance,
             firebaseFirestore: firebaseFirestore,
             googleSignIn: GoogleSignIn(),
+            prefs: prefs,
+          ),
+        ),
+        Provider(
+          create: (_) => SettingProvider(
+            firebaseFirestore: firebaseFirestore,
+            firebaseStorage: firebaseStorage,
             prefs: prefs,
           ),
         ),
